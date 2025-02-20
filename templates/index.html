@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传</title>
+</head>
+<body>
+    <h1>上传文件</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="file.xlsx">上传 Excel 文件:</label>
+        <input type="file" name="file.xlsx" accept=".xlsx" required><br><br>
+
+        <label for="input_image.jpg">上传图像文件:</label>
+        <input type="file" name="input_image.jpg" accept="image/*" required><br><br>
+
+        <button type="submit">上传并生成图像</button>
+    </form>
+</body>
+</html>

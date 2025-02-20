@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>处理结果</title>
+</head>
+<body>
+    <h1>文件处理完成！</h1>
+    <a href="/">返回首页</a><br><br>
+    <p>处理后的图像可以通过以下链接下载：</p>
+    {% for path in output_image_paths %}
+        <a href="{{ url_for('download_file', filename=path.split('/')[-1]) }}" download>下载图片 {{ loop.index }}</a><br>
+    {% endfor %}
+</body>
+</html>
